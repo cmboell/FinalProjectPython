@@ -1,3 +1,11 @@
+"""
+Program: 1hangman.py
+Author: Colby Boell
+Date: 05/03/2022 -- finished
+This program uses GUI to create a simple hangman game for a single player to play. The program
+uses a random word for the player to guess. The player gets six wrong guesses before the
+game is over.
+"""
 # imports that were needed
 import random
 from tkinter import *
@@ -21,7 +29,7 @@ while run:
     right_guess = 0
 
     # choose word at random from the list
-    index = random.randint(0, 1)
+    index = random.randint(0, 43)
     # text file where the words are stored
     file = open('words.txt', 'r')
     # reads the words file
@@ -60,7 +68,7 @@ while run:
               ['b17', 'q', 210, 645], ['b18', 'r', 280, 645], ['b19', 's', 350, 645], ['b20', 't', 420, 645],
               ['b21', 'u', 490, 645], ['b22', 'v', 560, 645], ['b23', 'w', 630, 645], ['b24', 'x', 700, 645],
               ['b25', 'y', 770, 645], ['b26', 'z', 840, 645]]
-    
+
     for q1 in button:
         exec(
             '{}=Button(root,bd=0,command=lambda:check("{}","{}"),bg="#FFFFFF",activebackground="#FFFFFF",font=10,image={})'.format(
